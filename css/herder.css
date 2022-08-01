@@ -1,0 +1,223 @@
+body{
+   font-family: 'Noto Sans KR', sans-serif;/*구글폰트*/
+   background-color: #fafcfe;
+}
+header{
+   position: fixed;
+   width: 100%;
+   z-index: 2;
+}
+header::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   border: 1px solid #eaeaeaab;
+   left: 0;
+   top: 27px;
+   z-index: 1;
+}
+header div.inner{ /*하위선택자*/
+   width: 95%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   height: 95px;
+   align-items: center;
+   position: relative;
+   /*! background-color: #eee; */
+   margin-top: 28px;
+}
+header div.inner::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   /*! border: 1px solid #ccc; */
+   top: 22px;
+   left: 0;
+   z-index: 1;
+}
+header .inner,header .inner>*{
+/*! border: 1px solid #333; */
+}
+header .inner {
+
+}
+header .inner h1 {
+    
+}
+header .inner h1 a {
+   background-image: url(../img/logo-pc.png);
+   width: 142px;
+   height: 35px;
+   display: block;
+   font-size: 0;
+   /*
+   수업) 로고삽입방법
+   background-image:url(../img/logo-pc.png);
+   width:142px;
+   height:35px;
+   display:block;
+   font-size:0;
+   */
+    
+   margin-bottom: 20px;
+}
+header .inner ul.gnb {
+   display: flex;
+   align-self: flex-start;
+   /*! gap: 15px; */
+}
+header .inner ul.gnb:before{
+   content: "";
+   background-color: white;
+   width: 110%;
+   height: 0px;
+   position: absolute;
+   left: -2.5%;
+   top: -28px;
+   z-index: -1;
+   transition: all 1s;
+   border-bottom: 15px;
+}
+header .inner ul.gnb:after{
+   content: "";
+   width: 110%;
+   height: 0px;
+   position: absolute;
+   left: -2.5%;
+   top: 80px;
+   z-index: -1;
+   border: 1px solid #eaeaeaab;
+   display: none;
+}
+header .inner ul.gnb:hover::after{
+   display: block;
+}
+header .inner ul.gnb:hover::before{
+   height: 450px;
+}
+header .inner ul.gnb>li {
+    
+}
+header .inner ul.gnb>li>h2 a {
+   font-weight: 400;
+   padding: 50px 30px;
+   /*20px 21px*/
+   display: block;
+/*! line-height: 3; */ /* 블럭에게만 적용되는 속성*/
+   font-size: 20px;
+   padding-top: 30px;
+   position: relative;
+   transition: all 0.5s;
+}
+header .inner ul.gnb>li>h2 a:hover{
+   /*! display: none; */
+   color: red;
+}
+header .inner ul.gnb > li > h2 a::after {
+   content: "";
+   display: block;
+   width: calc(100% - 60px);
+   border-bottom: 4px solid red;
+   transform: translateY(29px) scaleX(0);
+   position: absolute;
+   left: 30px;
+   transition: all 0.5s;
+   transform-origin: 50%;
+}
+header .inner ul.gnb>li:hover>h2 a::after{
+   content: "";
+   display: block;
+   width: calc(100% - 60px);
+   border-bottom: 4px solid red;
+   transform: translateY(29px);
+   position: absolute;
+   left: 30px;
+}
+/*gnb서브메뉴*/
+header .inner ul.gnb>li>ul.gnbsub{
+   display: none;
+}
+header .inner ul.gnb:hover li ul.gnbsub{
+   display: block;
+}
+header .inner ul.gnb:hover ul.gnbsub{
+   opacity: 0;
+   animation-name: gnbfadein;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+   animation-delay: 0.5s;
+}
+@keyframes gnbfadein{
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+header .inner ul.gnb>li>ul.gnbsub li{
+   
+}
+header .inner ul.gnb>li>ul.gnbsub li a{
+   line-height: 2;
+   padding-left: 30px;
+   /*! padding-right: 2px; */
+}
+header .inner ul.gnb>li>ul.gnbsub li a:hover{
+   color: red;
+   transition: all 0.3s;
+}
+header .inner ul.enb {
+   display: flex;
+   gap:15px;
+}
+header .inner ul.enb li {
+    
+}
+header .inner ul.enb li a{
+   font-size: 0px;
+   width: 20px;
+   height: 15px;
+   display: flex;
+   align-items: center;
+   border-top: 3px solid #666;
+   border-bottom: 3px solid #666;
+}
+header .inner ul.enb li a::before{
+   content: "";
+   /*! border-top: 3px solid #666; */
+   width: 100%;
+   display: block;
+   height: 3px;
+   background-color: #666;
+}
+header .inner ul.enb li select {
+   background-color: transparent;
+   border: none;
+}
+header .inner ul.tnb{
+   position: absolute;
+   right: 0;
+   top: -22px;
+   font-size: 12px;
+   
+   display: flex;
+   gap: 14px;
+}
+header .inner ul.tnb li{
+   
+}
+header .inner ul.tnb a::after{
+   content: "";
+   background-image: url(../img/openinnew.svg);
+   width: 16px;
+   height: 16px;
+   display: inline-block;
+   background-size: contain;
+   vertical-align: -4px;
+   margin-left: 1px;
+}
+header .inner ul.tnb li:nth-child(1) a::after{
+   margin-left: 1px;
+}

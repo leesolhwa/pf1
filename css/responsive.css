@@ -1,0 +1,9 @@
+@media screen and (max-width:768px) {
+ /*max-width 이하 미디어쿼리*/
+  header .inner ul.gnb{
+    display: none;
+  }
+  header .inner ul.tnb{
+    display: none;
+  }
+}
