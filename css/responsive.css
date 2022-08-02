@@ -1,9 +1,167 @@
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px){
+  /*헤더*/
+  header div.inner{
+    flex-wrap: wrap;
+  }
+  header .inner h1{
+    order: 1;
+  }
+  header .inner ul.gnb{
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+  header .inner ul.enb{
+    order: 2
+  }
+  /*타이틀*/
+  #title{
+    min-height: 36.45833333333333vw;
+    height: 100vw;
+  }
+  #title::before{
+    width: 78.54166666666667vw;
+    height: 20.20833333333333vw;
+    margin-top: 3.125vw;
+  }
+  #title form.search{
+    width: 36.45833333333333vw;
+    min-width: 600px;
+  }
+  #title ul.hash{ 
+    column-gap: 20px;
+  }
+  /*빙그레맛*/
+  #taste .inner ul.list li{
+  width: calc((100% / 3) - (50px / 6));
+  }
+  /*브랜드샵*/
+  #shop::before{
+    display: none;
+  }
+  #shop .inner ul.list li{
+  width: calc(100% / 3 - 20px / 3);
+  }
+  #shop .inner ul.list{
+    flex-wrap: wrap;
+  }
+  /*커뮤니티*/
+  #community .inner > article{
+  width: 90%;
+  box-sizing: border-box;
+  }
+  #community .inner div article ul li{
+  width: calc(100%);
+  }
+  #community .inner div article:not(.qna){
+  width: calc(100%);
+  }
+  /*footer*/
+  footer .inner{
+  display: block;
+  height: auto;
+  }
+  footer .inner .left address{
+  transform: translateY(0);
+  margin-top: 0;
+  }
+  footer .inner > div{
+    display: flex;
+  }
+  footer .inner .right .bottom{
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-top: 30px;
+  }
+  footer .inner .right .bottom ul.sns li a{
+    width: 50px;
+    height: 50px;
+  }
+  footer .inner .right .bottom > a{
+  margin-left: 0;
+  }
+  footer .inner .right{
+  align-items: flex-start;
+  }
+  footer .inner .right ul.personal li{
+  margin-top: 30px;
+  }
+}
+
+
+@media screen and (max-width:768px){
  /*max-width 이하 미디어쿼리*/
   header .inner ul.gnb{
     display: none;
   }
   header .inner ul.tnb{
     display: none;
+  }
+  /*타이틀*/
+  #title form.search{
+    min-width: 90%;
+  }
+  #title ul.hash li a{
+    font-size: 13px;
+  }
+  /*빙그레맛*/
+  #taste .inner ul.list li{
+    width: calc((100% / 2) - (50px / 2));
+  }
+  /*브랜드샵*/
+  #shop .inner ul.list li{
+    width: calc((100% / 2) - (10px / 2));
+    /*뒤에 빼는건 gap-n이당.*/
+  }
+  #shop .inner ul.list{
+    flex-wrap: wrap;
+  }
+  #shop::before{
+    display: none;
+  }
+  /*커뮤니티*/
+  #community .inner div{
+  width: 100%;
+  gap: initial;
+  box-shadow: 0 0 0 transparent;
+  row-gap: 50px;
+  padding: 0;
+  }
+  /*footer*/
+  footer .inner{
+  display: block;
+  height: auto;
+  padding: 10px;
+  }
+  footer .inner .left address{
+  transform: translateY(0);
+  margin-top: 0;
+  }
+  footer .inner > div{
+    display: flex;
+    margin: 20px;
+  }
+  footer .inner .right .bottom{
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-top: 30px;
+  }
+  footer .inner .right .bottom ul.sns li a{
+    width: 50px;
+    height: 50px;
+  }
+  footer .inner .right .bottom > a{
+  margin-left: 0;
+  /*! padding: 0; */
+  width: 85%;
+  }
+  footer .inner .right{
+  align-items: flex-start;
+  }
+  footer .inner .right ul.personal li{
+  margin-top: 30px;
+  }
+  header .inner ul.enb li select{
+    
   }
 }
